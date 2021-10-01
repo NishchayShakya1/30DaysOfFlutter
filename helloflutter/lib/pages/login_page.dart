@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloflutter/utils/credential.dart';
+import 'package:helloflutter/utils/credentials.dart';
 import 'package:helloflutter/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
