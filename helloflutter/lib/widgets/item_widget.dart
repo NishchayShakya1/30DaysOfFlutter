@@ -15,7 +15,7 @@ class ItemWidget extends StatelessWidget {
       child: Card(
         //shape: StadiumBorder(),
         shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
+          borderRadius: BorderRadius.circular(10.0),
         ),
         child: Padding(
           padding: const EdgeInsets.all(7.0),
@@ -32,7 +32,7 @@ class ItemWidget extends StatelessWidget {
               "\$${item.price}",
               textScaleFactor: 1.5,
               style: TextStyle(
-                color: Colors.deepPurple,
+                color: Colors.blueGrey,
                 fontWeight: FontWeight.bold,
               ),
             ),

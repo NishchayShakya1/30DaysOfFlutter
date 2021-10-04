@@ -4,7 +4,7 @@ class CatalogModel {
         id: "1",
         name: "iphone 13 Pro",
         desc: "Aukat ke Bahar",
-        price: 120000,
+        price: 999,
         color: "#33505a",
         image: "assets/images/iphone13pro.png")
   ];
@@ -20,5 +20,3 @@ class Item {
 
   Item({this.id, this.name, this.desc, this.price, this.color, this.image});
 }
-
-
