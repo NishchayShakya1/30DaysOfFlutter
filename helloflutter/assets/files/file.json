@@ -39,6 +39,22 @@
         "price": 999,
         "color": "#33505a",
         "image": "assets/images/1++.png"
+    },
+    {
+        "id": "6",
+        "name": "One Plus",
+        "desc": "Aukat ke Bahar",
+        "price": 999,
+        "color": "#33505a",
+        "image": "assets/images/1++.png"
+    },
+    {
+        "id": "7",
+        "name": "One Plus",
+        "desc": "Aukat ke Bahar",
+        "price": 999,
+        "color": "#33505a",
+        "image": "assets/images/1++.png"
     }
 
   ]
