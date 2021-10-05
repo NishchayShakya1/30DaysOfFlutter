@@ -10,35 +10,35 @@
     },
     {
         "id": "2",
-        "name": "iphone 12 Pro",
+        "name": "iphone 11 Pro",
         "desc": "Aukat ke Bahar",
         "price": 800,
         "color": "#33505a",
-        "image": "assets/images/iphone13pro.png"
+        "image": "assets/images/11pro.png"
     },
     {
         "id": "3",
-        "name": "iphone 11 Pro",
+        "name": "ipad Pro",
         "desc": "Aukat ke Bahar",
         "price": 999,
         "color": "#33505a",
-        "image": "assets/images/iphone13pro.png"
+        "image": "assets/images/ipadpro.png"
     },
     {
         "id": "4",
-        "name": "iphone 13",
+        "name": "Macbook",
         "desc": "Aukat ke Bahar",
         "price": 999,
         "color": "#33505a",
-        "image": "assets/images/iphone13pro.png"
+        "image": "assets/images/macbook.png"
     },
     {
         "id": "5",
-        "name": "iphone 12",
+        "name": "One Plus",
         "desc": "Aukat ke Bahar",
         "price": 999,
         "color": "#33505a",
-        "image": "assets/images/iphone13pro.png"
+        "image": "assets/images/1++.png"
     }
 
   ]
