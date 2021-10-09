@@ -15,11 +15,14 @@ class CatalogList extends StatelessWidget {
         itemCount: CatalogModel.items.length,
         itemBuilder: (context, index) {
           final catalog = CatalogModel.items[index];
+          // final catalog = CatalogModel.getbyPosition(index);
           return InkWell(
               onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => HomeDetailPage(catalog: catalog))),
+                      builder: (context) => HomeDetailPage(catalog: catalog
+                      //CatalogModel.getById(2)
+                      ))),
               child: CatalogItem(catalog: catalog));
         });
   }
@@ -38,7 +41,7 @@ class CatalogItem extends StatelessWidget {
         child: Row(
       children: [
         Hero(
-          tag: Key(catalog.id),
+          tag: Key(catalog.id.toString()),
           child: CatalogImage(image: catalog.image),
         ),
         Expanded(

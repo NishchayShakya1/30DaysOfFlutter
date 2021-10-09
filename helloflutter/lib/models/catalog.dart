@@ -1,19 +1,18 @@
 import 'dart:convert';
 
 class CatalogModel {
-   static List<Item> items; //[
-  //   Item(
-  //       id: "1",
-  //       name: "iphone 13 Pro",
-  //       desc: "Aukat ke Bahar",
-  //       price: 999,
-  //       color: "#33505a",
-  //       image: "assets/images/iphone13pro.png")
-  // ];
+  static List<Item> items;
+
+  // Get Item by ID
+  static Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+
+  // Get Item by position
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
@@ -21,37 +20,16 @@ class Item {
   final String image;
 
   Item({
-     this.id,
-     this.name,
-     this.desc,
-     this.price,
-     this.color,
-     this.image,
+    this.id,
+    this.name,
+    this.desc,
+    this.price,
+    this.color,
+    this.image,
   });
 
-  // factory Item.fromMap(Map<String, dynamic> map) {
-  //   return Item(
-  //     id: map["id"],
-  //     name: map["name"],
-  //     desc: map["desc"],
-  //     price: map["price"],
-  //     color: map["color"],
-  //     image: map["image"]
-  //   );
-  // }
-
-  // toMap() => {
-  //   "id" : id,
-  //   "name" : name,
-  //   "desc" : desc,
-  //   "price" : price,
-  //   "color" : color,
-  //   "image" : image
-  // };
-
-
   Item copyWith({
-    String id,
+    int id,
     String name,
     String desc,
     num price,
@@ -80,6 +58,8 @@ class Item {
   }
 
   factory Item.fromMap(Map<String, dynamic> map) {
+    if (map == null) return null;
+
     return Item(
       id: map['id'],
       name: map['name'],
@@ -100,25 +80,25 @@ class Item {
   }
 
   @override
-  bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-  
-    return other is Item &&
-      other.id == id &&
-      other.name == name &&
-      other.desc == desc &&
-      other.price == price &&
-      other.color == color &&
-      other.image == image;
+  bool operator ==(Object o) {
+    if (identical(this, o)) return true;
+
+    return o is Item &&
+        o.id == id &&
+        o.name == name &&
+        o.desc == desc &&
+        o.price == price &&
+        o.color == color &&
+        o.image == image;
   }
 
   @override
   int get hashCode {
     return id.hashCode ^
-      name.hashCode ^
-      desc.hashCode ^
-      price.hashCode ^
-      color.hashCode ^
-      image.hashCode;
+        name.hashCode ^
+        desc.hashCode ^
+        price.hashCode ^
+        color.hashCode ^
+        image.hashCode;
   }
 }

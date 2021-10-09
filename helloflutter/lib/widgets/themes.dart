@@ -8,7 +8,7 @@ class MyTheme {
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.white,
         canvasColor: creamColor,
-         // ignore: deprecated_member_use
+        // ignore: deprecated_member_use
         buttonColor: darkBluishColor,
         // ignore: deprecated_member_use
         accentColor: Colors.black,
@@ -19,7 +19,7 @@ class MyTheme {
           titleTextStyle: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
-              fontSize: 20,
+              fontSize: 25,
               fontFamily: GoogleFonts.poppins().fontFamily),
         ),
       );
@@ -40,7 +40,7 @@ class MyTheme {
           titleTextStyle: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 20,
+              fontSize: 25,
               fontFamily: GoogleFonts.poppins().fontFamily),
         ),
       );

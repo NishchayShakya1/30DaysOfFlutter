@@ -1,7 +1,7 @@
 {
  "products" : [
     {
-        "id": "1",
+        "id": 1,
         "name": "iPhone 13 Pro",
         "desc": "Aukat ke Bahar",
         "price": 999,
@@ -9,7 +9,7 @@
         "image": "assets/images/iphone13pro.png"
     },
     {
-        "id": "2",
+        "id": 2,
         "name": "iPhone 11 Pro",
         "desc": "Aukat ke Bahar",
         "price": 800,
@@ -17,7 +17,7 @@
         "image": "assets/images/11pro.png"
     },
     {
-        "id": "3",
+        "id": 3,
         "name": "iPad Pro",
         "desc": "Aukat ke Bahar",
         "price": 600,
@@ -25,7 +25,7 @@
         "image": "assets/images/ipadpro.png"
     },
     {
-        "id": "4",
+        "id": 4,
         "name": "Macbook Pro 13",
         "desc": "Aukat ke Bahar",
         "price": 1500,
@@ -33,7 +33,7 @@
         "image": "assets/images/macbook.png"
     },
     {
-        "id": "5",
+        "id": 5,
         "name": "One Plus",
         "desc": "Aukat ke Andar",
         "price": 432,
@@ -41,7 +41,7 @@
         "image": "assets/images/1++.png"
     },
     {
-        "id": "6",
+        "id": 6,
         "name": "Vivo",
         "desc": "Aukat ke Andar",
         "price": 300,
@@ -49,7 +49,7 @@
         "image": "assets/images/1++.png"
     },
     {
-        "id": "7",
+        "id": 7,
         "name": "Redmi Note 10S",
         "desc": "Aukat ke Andar",
         "price": 350,
