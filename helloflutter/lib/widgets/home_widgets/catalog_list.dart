@@ -1,8 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:helloflutter/models/catalog.dart';
 import 'package:helloflutter/pages/home_detail_page.dart';
 import 'package:helloflutter/widgets/home_widgets/catalog_image.dart';
-import 'package:helloflutter/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CatalogList extends StatelessWidget {
@@ -45,8 +46,8 @@ class CatalogItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(padding: EdgeInsets.all(8.0)),
-            catalog.name.text.lg.xl2.color(MyTheme.darkBluishColor).bold.make(),
-            catalog.desc.text.black
+            catalog.name.text.lg.xl2.color(context.accentColor).bold.make(),
+            catalog.desc.text
                 .textStyle(
                   context.captionStyle,
                 )
@@ -56,12 +57,12 @@ class CatalogItem extends StatelessWidget {
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding: Vx.mH8,
               children: [
-                "\$${catalog.price}".text.black.bold.xl.make(),
+                "\$${catalog.price}".text.bold.xl.make(),
                 ElevatedButton(
                   onPressed: () {},
                   style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
-                        MyTheme.darkBluishColor,
+                        context.theme.buttonColor,
                       ),
                       shape: MaterialStateProperty.all(
                         StadiumBorder(),
@@ -73,6 +74,6 @@ class CatalogItem extends StatelessWidget {
           ],
         ))
       ],
-    )).blue100.roundedLg.square(150).make().py16();
+    )).color(context.cardColor).roundedLg.square(150).make().py16();
   }
 }

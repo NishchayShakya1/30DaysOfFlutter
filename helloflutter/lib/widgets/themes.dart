@@ -8,6 +8,10 @@ class MyTheme {
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.white,
         canvasColor: creamColor,
+         // ignore: deprecated_member_use
+        buttonColor: darkBluishColor,
+        // ignore: deprecated_member_use
+        accentColor: Colors.black,
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
@@ -21,10 +25,14 @@ class MyTheme {
       );
 
   static ThemeData get darkTheme => ThemeData(
+        brightness: Brightness.dark,
         fontFamily: GoogleFonts.poppins().fontFamily,
         cardColor: Colors.black,
         canvasColor: darkCreamColor,
-       // buttonTheme: ButtonThemeData(buttonColor: lightBluishColor),
+        // ignore: deprecated_member_use
+        buttonColor: lightBluishColor,
+        // ignore: deprecated_member_use
+        accentColor: Colors.white,
         appBarTheme: AppBarTheme(
           color: Colors.black,
           elevation: 0.0,
@@ -37,8 +45,8 @@ class MyTheme {
         ),
       );
 
-  static Color creamColor = Color(0xfff5f5f5);
+  static Color creamColor = Vx.blue200;
   static Color darkBluishColor = Color(0xff403b58);
   static Color darkCreamColor = Vx.gray900;
-  static Color lightBluishColor = Vx.purple400;
+  static Color lightBluishColor = Vx.indigo500;
 }

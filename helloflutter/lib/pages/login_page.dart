@@ -1,6 +1,9 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:helloflutter/utils/credentials.dart';
 import 'package:helloflutter/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -29,6 +32,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
+      color: context.canvasColor,
         child: SingleChildScrollView(
       child: Form(
         key: _formKey,
@@ -89,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
 
                     Material(
                       color:
-                          changeButton ? Colors.green[400] : Colors.deepPurple,
+                          changeButton ? Colors.green[400] : context.theme.buttonColor,
                       borderRadius:
                           BorderRadius.circular(changeButton ? 50 : 8),
                       child: InkWell(
