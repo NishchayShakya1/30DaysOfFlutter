@@ -33,7 +33,7 @@ class HomeDetailPage extends StatelessWidget {
         bottom: false,
         child: Column(
           children: [
-            Hero(tag: Key(catalog.id.toString()), child: Image.asset(catalog.image))
+            Hero(tag: Key(catalog.id.toString()), child: Image.network(catalog.image))
                 .h32(context)
                 .p32(),
             Expanded(

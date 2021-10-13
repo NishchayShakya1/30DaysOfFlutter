@@ -38,7 +38,7 @@ class _CartTotal extends StatelessWidget {
           VxBuilder(
            
             mutations: {RemoveMutation},
-            builder: (context,_) {
+            builder: (context, _,mut) {
               return "\$${_cart.totalPrice}"
               .text
               .xl4
@@ -73,7 +73,7 @@ class _CartTotal extends StatelessWidget {
 class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    VxState.listen(context, to: [RemoveMutation]);
+    VxState.watch(context, on: [RemoveMutation]);
     final CartModel _cart = (VxState.store as Mystore).cart;
     return _cart.items.isEmpty
         ? "Nothing To Show".text.xl3.makeCentered()
