@@ -16,7 +16,7 @@ class AddToCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    VxState.listen(context, to: [AddMutation]);
+    VxState.listen(context, to: [AddMutation, RemoveMutation ]);
     final CartModel _cart = (VxState.store as Mystore).cart;
 
     bool isInCart = _cart.items.contains(catalog) ?? false;
