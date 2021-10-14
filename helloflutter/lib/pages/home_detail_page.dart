@@ -3,7 +3,6 @@ import 'package:helloflutter/models/catalog.dart';
 
 import 'package:helloflutter/widgets/home_widgets/add_to_cart.dart';
 
-
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeDetailPage extends StatelessWidget {
@@ -16,24 +15,33 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.transparent,),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: context.theme.canvasColor,
       bottomNavigationBar: Container(
         color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
-          buttonPadding: Vx.mH8,
+          buttonPadding: Vx.mH0,
           children: [
-            "\$${catalog.price}".text.color(context.accentColor).bold.xl2.make(),
+            "\$${catalog.price}"
+                .text
+                .color(context.accentColor)
+                .bold
+                .xl3
+                .make(),
             AddToCart(catalog: catalog).wh(110, 40)
           ],
-        ).p24(),
+        ).py8().px16(),
       ),
       body: SafeArea(
         bottom: false,
         child: Column(
           children: [
-            Hero(tag: Key(catalog.id.toString()), child: Image.network(catalog.image))
+            Hero(
+                    tag: Key(catalog.id.toString()),
+                    child: Image.network(catalog.image))
                 .h32(context)
                 .p32(),
             Expanded(
@@ -50,9 +58,7 @@ class HomeDetailPage extends StatelessWidget {
                         .color(context.accentColor)
                         .bold
                         .make(),
-                    catalog.desc.text.xl
-                        .textStyle(context.captionStyle)
-                        .make(),
+                    catalog.desc.text.xl.textStyle(context.captionStyle).make(),
                     "Sanctus no takimata sanctus est clita ea et nonumy, lorem vero dolores dolore vero. Ipsum stet takimata dolor dolore dolores diam sit. Invidunt et takimata amet eos et et eirmod gubergren rebum. Vero lorem amet ut amet, ipsum tempor justo eos stet ut justo eirmod. Rebum duo voluptua rebum lorem."
                         .text
                         .textStyle(context.captionStyle)

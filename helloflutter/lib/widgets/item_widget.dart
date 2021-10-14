@@ -23,7 +23,8 @@ class ItemWidget extends StatelessWidget {
             onTap: () {
               print(item.name);
             },
-            leading: Image.network(           //asset
+            leading: Image.network(
+              //asset
               item.image,
             ),
             title: Text(item.name),

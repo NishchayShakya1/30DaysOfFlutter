@@ -11,7 +11,7 @@ class CatalogList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        padding: EdgeInsets.symmetric(vertical: 10.0),
+        padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 0),
         shrinkWrap: true,
         itemCount: CatalogModel.items.length,
         itemBuilder: (context, index) {
@@ -22,8 +22,8 @@ class CatalogList extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (context) => HomeDetailPage(catalog: catalog
-                      //CatalogModel.getById(2)
-                      ))),
+                          //CatalogModel.getById(2)
+                          ))),
               child: CatalogItem(catalog: catalog));
         });
   }
@@ -49,27 +49,25 @@ class CatalogItem extends StatelessWidget {
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(padding: EdgeInsets.all(8.0)),
+            Padding(padding: EdgeInsets.all(7.0)),
             catalog.name.text.lg.xl2.color(context.accentColor).bold.make(),
             catalog.desc.text
                 .textStyle(
                   context.captionStyle,
                 )
                 .make(),
-            10.heightBox,
+            3.heightBox,
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
-              buttonPadding: Vx.mH8,
+              buttonPadding: Vx.mH2,
               children: [
                 "\$${catalog.price}".text.bold.xl.make(),
-                AddToCart(catalog : catalog)
+                AddToCart(catalog: catalog)
               ],
-            ).pOnly(right: 8.0)
+            ).pOnly(right: 10.0)
           ],
         ))
       ],
-    )).color(context.cardColor).roundedLg.square(150).make().py16();
+    )).color(context.cardColor).roundedLg.square(150).make().py16().px0();
   }
 }
-
-
