@@ -56,7 +56,7 @@ class CatalogItem extends StatelessWidget {
                   context.captionStyle,
                 )
                 .make(),
-            3.heightBox,
+            25.heightBox,
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
               buttonPadding: Vx.mH2,

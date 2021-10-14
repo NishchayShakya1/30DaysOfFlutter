@@ -10,7 +10,7 @@ class CatalogImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(image)
+    return Image.asset(image)
         .box
         .rounded
         .p8

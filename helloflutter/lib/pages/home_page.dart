@@ -1,15 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'package:helloflutter/core/store.dart';
 import 'package:helloflutter/models/cart.dart';
 import 'package:helloflutter/models/catalog.dart';
 import 'package:helloflutter/utils/routes.dart';
+import 'package:helloflutter/widgets/drawer.dart';
 import 'package:helloflutter/widgets/home_widgets/catalog_header.dart';
 import 'package:helloflutter/widgets/home_widgets/catalog_list.dart';
 import 'dart:convert';
 import 'package:velocity_x/velocity_x.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,7 +23,7 @@ class _HomePageState extends State<HomePage> {
 
   final String name = "Flutter";
 
-  final url = "https://api.jsonbin.io/b/604dbddb683e7e079c4eefd3";
+  //final url = "https://api.jsonbin.io/b/604dbddb683e7e079c4eefd3";
 
   @override
   void initState() {
@@ -33,9 +35,9 @@ class _HomePageState extends State<HomePage> {
 
   loadData() async {
     await Future.delayed(Duration(seconds: 2));
-    // var catalogJson = await rootBundle.loadString("assets/files/file.json");\
-    var response = await http.get(Uri.parse(url));
-    var catalogJson = response.body;
+     var catalogJson = await rootBundle.loadString("assets/files/file.json");
+    //var response = await http.get(Uri.parse(url));
+    //var catalogJson = response.body;
     var decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
     CatalogModel.items = List.from(productsData)
@@ -49,6 +51,9 @@ class _HomePageState extends State<HomePage> {
     final _cart = (VxState.store as Mystore).cart;
     // final dummyList = List.generate(10, (index) => CatalogModel.items[0]);
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: context.canvasColor,
+      ),
       backgroundColor: context.canvasColor,
       floatingActionButton: VxBuilder(
         mutations: {AddMutation, RemoveMutation},
@@ -79,6 +84,7 @@ class _HomePageState extends State<HomePage> {
           ]),
         ),
       ),
+      drawer: MyDrawer(),
     );
   }
 }
