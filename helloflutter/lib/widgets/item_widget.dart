@@ -24,7 +24,7 @@ class ItemWidget extends StatelessWidget {
               print(item.name);
             },
             leading: Image.asset(
-              //asset
+              //network
               item.image,
             ),
             title: Text(item.name),
